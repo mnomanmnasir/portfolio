@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noman Nasir</title>
+    <link rel="icon" href="images/img1.jpeg">
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+
+    
+
+    <div class="card first">
+        <div class="image">
+            <img class="myimage" src="images/img1.jpeg" alt="profile pic">
+        </div>
+        <h1 class="name">Noman Nasir</h1>
+        <h1 class="subtitle">Web Developer</h1>
+        <div class="social_icons">
+            <a href="https://www.whatsapp.com" target="_blank" class="nav_icons social"> 
+                <img src="icons/whatsapp.gif" alt="" width="100%" /></a>
+            <a href="https://www.linkedin.com/in/noman-nasir-bb7888223" target="_blank" class="nav_icons social"> <img
+                    src="icons/linkedin.gif" alt="linkedin" width="100%" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100008743240284" target="_blank" class="nav_icons social"> <img
+                    src="icons/facebook.gif" alt="facebook" width="100%" /></a>
+            <a href="https://instagram.com/nomannasir15?igshid=YmMyMTA2M2Y=" target="_blank" class="nav_icons social"> <img src="icons/instagram.gif" alt="instagram"
+                    width="100%" /></a>
+            <a href="https://github.com/mnomanmnasir" target="_blank" class="nav_icons social"> <img src="icons/icons8-github-30.png" alt="github" width="820%"  /></a>
+                       
+
+        </div>
+        <br>
+    </div>
+
+    <!-- >>>   options  <<<  -->
+
+    <div class="card option" id="options">
+        <div class="main" onclick="showOptions('details')">
+            <a href="#details"><h5>Details</h5></a>
+        </div>
+        <hr>
+        <div class="main" onclick="showOptions('portfolio')">
+            <a href="#portfolio">
+                <h5>Portfolios</h5>
+            </a>
+        </div>
+    </div>
+
+    <!-- >>>   portfolio  <<<  -->
+
+    <div class="card" id="portfolio">
+        <h1 class="skills heading">Portfolio</h1>
+        <div class="portfolio option">
+        
+            <div class="portfolio-option-icon">
+                <img class="web-portfolio-option-icon" src="icons/webDevelopment.png" alt="website portfolio">
+                <a href="./web_portfolio.html">
+                    <h6 class="portfolio-option-name" > Web Development </h6>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- >>>   details options  <<<  -->
+
+    <div id="details">
+        <div class="card option">
+            <div class="navbar">
+                <a href="#about" class="navbar_icon"> <img src="./icons/about.gif" alt="about" width="100%" /></a>
+                <a href="#skills" class="navbar_icon"> <img src="./icons/skills.gif" alt="skills" width="100%" /></a>
+                
+                <a href="#educations" class="navbar_icon"> <img src="./icons/education.gif" alt="education"
+                        width="100%" /></a>
+                <a href="#experiences" class="navbar_icon"><img src="./icons/experience.gif" alt="experience"
+                        width="100%" /></a>
+                <a href="#projects" class="navbar_icon"> <img src="./icons/projects.png" alt="experience"
+                        width="100%" /></a>
+            </div>
+        </div>
+
+        <!-- >>>   about  <<<  -->
+
+        <div class="card">
+            <img class="icons" src="./icons/about.gif" alt="skills">
+            <h1 class="about heading">About</h1>
+            <div class="edu">
+                <h5>Gender: <span>Male</span></h5>
+                <h5>Marital Status: <span>Single</span></h5>
+                <h5>Date of Birth: <span>06th October, 2000</span></h5>
+            </div>
+        </div>
+
+        <!-- >>>   skills  <<<  -->
+
+        <div class="card" id="skills">
+            <img class="icons" src="./icons/skills.gif" alt="skills">
+            <h1 class="skills heading">Skills</h1>
+            <div class="edu">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JAVASCRPIT</span>
+                <span class="tag">JAVA</span>
+                <span class="tag">React JS</span>
+                <span class="tag">C LANGUAGE</span>
+                <span class="tag">C++</span>
+                <span class="tag">OOP</span>
+                <span class="tag">DSA</span>
+                <span class="tag">DATABASE</span>
+                <span class="tag">SQL SERVER</span>
+                <span class="tag">ROUTER-CONFIGURATION</span>
+                <h3 style="margin-top: 2%;">IN-PERSONAL SKILLS</h3>
+                <span class="tag">GOOD COMMUNICATION</span>
+                <span class="tag">TEAM LEADING</span>
+                <span class="tag">TEAM MANAGEMENT</span>
+                <span class="tag">STRATEGIC THINKING</span>
+                <span class="tag">PROBLEM SOLVING</span>
+                <span class="tag">DECISION MAKING</span>
+                <span class="tag">RISK MANAGEMENT</span>
+                <span class="tag">RISK PLANNING</span>
+
+            </div>
+        </div>
+
+
+        <!-- >>>   educations  <<<  -->
+
+        <div class="card" id="educations">
+            <img class="icons" src="icons/education.gif" alt="educations">
+            <h1 class="education heading">Educations</h1>
+            <div class="edu">
+                <div class="cert" onclick="showHide('e1')">
+                    <h4>Graduation : Bachelor's of Science in Software Engineering</h4>
+                    <img class="more" src="icons/more.gif" alt="read more">
+                    <div class="details" id="e1">
+                        <div>
+                            <img class="certified" src="icons/education.gif" alt="certified">
+                            <div class="more_details">
+                                <h5>University: <span>Mohammad Ali Jinnah university MAJU</span></h5>
+                                <!-- <h5>Current CGPA: <span>2.58</span></h5> -->
+                                <h5>Status: <span>In Progress</span></h5>
+                                <h5>Start Date: <span>2019</span></h5>
+                                <h5>Expected End Date: <span>2023</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('e3')">
+                    <h4>Intermediate : Pre-Engineering</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="e3">
+                        <div>
+                            <img class="certified" src="./icons/education.gif" alt="certified">
+                            <div class="more_details">
+                                <h5>College: <span>NCR-CET College</span></h5>
+                                <h5>Passing Year: <span>2019</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('e4')">
+                    <h4>Matriculation : Bio-Science</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="e4">
+                        <div>
+                            <img class="certified" src="./icons/education.gif" alt="certified">
+                            <div class="more_details">
+                                <h5>School: <span>Excellence Model School</span></h5>
+                                <h5>Passing Year:<span>2017</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- >>>   experiences  <<<  -->
+
+        <div class="card" id="experiences">
+            <img class="icons" src="./icons/experience.gif" alt="experiences">
+            <h1 class="experience heading">Experiences</h1>
+            <div class="edu">
+                <div class="cert" onclick="showHide('exp1')">
+                    <h4>Web Deveopment</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="exp1">
+                        <div>
+                            <img class="certified" src="./icons/experience.gif" alt="certified">
+                            <div class="more_details">
+                                <h5>Company : <span>Orbhex</span></h5>
+                                <h5>Duration : <span>2.5 Months</span></h5>
+                                <h5>Description</h5>
+                                <p class="description">
+                                    This is certified was associated with us as an internee in Web Development Department 
+                                    We appreciate his working capabilities, managing priorities and good communication skills.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('exp2')">
+                    <h4>Teaching</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="exp2">
+                        <div>
+                            <img class="certified" src="./icons/experience.gif" alt="certified">
+                            <div class="more_details">
+                                <h5>Subjects : <span>Mathematics, Chemistry and Physics</span></h5>
+                                <h5>Duration : <span>2 Years</span></h5>
+                                <h5>Description</h5>
+                                <p class="description">
+                                    You may need teaching experience to apply for a job or to advance your career,
+                                    if you have a good command in subjects/good communication skills.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 </div>
+        </div>
+
+        <!-- >>>   projects  <<<  -->
+
+        <div class="card" id="projects">
+            <img class="icons" src="./icons/projects.png" alt="experiences">
+            <h1 class="experiences heading">Projects</h1>
+            <div class="edu">
+                <div class="cert" onclick="showHide('p1')">
+                    <h4>Create a TODO-APP</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="p1">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">
+                                    It is a Complete Application, Todo List is designed to be the best personal taskfor you windows phone what helps you better prioritize the things that you need to do.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('p2')">
+                    <h4>Digital Clock</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="p2">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">A digital clock is a type of clock that displays the time digitally (i.e. in numerals or other symbols), as opposed to an analogue clock. Digital clocks are often associated with electronic drives, but the "digital" description refers only to the display, not to the drive mechanism.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('p3')">
+                    <h4>Firebase Authentication</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="p3">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">Firebase authentication is a feature of user authentication that is provided by Firebase as its backend services. This is a token-based authentication system that provides easy integration with most of the platforms. 
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert" onclick="showHide('p4')">
+                    <h4>Create a Stop-Watch with Responsive</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="p4">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">
+                                    A stopwatch is a timepiece designed to measure the amount of time that elapses between its activation and deactivation. 
+                                    A large digital version of a stopwatch designed for viewing at a distance, the clock is started and stopped by a person pressing a button.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('p5')">
+                    <h4>Create a E-commerce Web-Site</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="p5">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">
+                                    An E-Commerce website is an information technology method in which traders, businesses/distributors/marketers can sell products/services and the customer can purchase on that website electronically by using the internet on the mobile and computer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('p6')">
+                    <h4>Create a Calculator</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="p6">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">
+                                
+                                    A calculator is a device that performs arithmetic operations on numbers. Basic calculators can do only addition, subtraction, multiplication and division mathematical calculations. 
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('p7')">
+                    <h4>Create a Billing System</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                    <div class="details" id="p7">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">
+                                    Is your billing and invoicing process one of the essential things you worry about? Are you still relying on various spreadsheets to bill your clients? A strategically chosen billing system can automate your back-office tasks and reduce the number of late payments you receive.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert" onclick="showHide('p8')">
+                    <h4>Quiz App</h4>
+                    <img class="more" src="./icons/more.gif" alt="read more">
+                          
+                    <div class="details" id="p8">
+                        <div>
+                            <img class="certified" src="./icons/projects.png" alt="certified">
+                            <div class="more_details">
+                                <h5>Description</h5>
+                                <p class="description">
+                                    Create simple to sophisticated quizzes online. Measure & act on feedback.. Give your teams the data they need to make smarter decisions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="main">
+            <p class="note">Click the Button to download Complete Resume!!</p>
+            <a href="file/RESUME (1).pdf" target="_blank" download>
+                <h5 class="btn">Get Resume</h5>
+            </a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
