@@ -181,10 +181,12 @@ body {
     padding: 1%;
 }
 
-.description {
+.description 
+{
     font-size: 1vw;
     padding: 1%;
 }
+
 
 .certified {
     width: 40%;
@@ -196,6 +198,12 @@ body {
     width: 50%;
     padding-left: 3%;
     /* margin-top: auto; */
+}
+.more_details a{
+    color: #132a65;
+    /* font-size: -1px; */
+    font-weight: bold;
+    list-style: circle;
 }
 
 .view {
