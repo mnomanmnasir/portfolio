@@ -93,6 +93,14 @@
             mix-blend-mode: screen
         }
 
+        .about-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            /* ya 50% agar circle chahte ho */
+        }
+
         #cursor-ring {
             position: fixed;
             width: 36px;
@@ -163,6 +171,7 @@
                 width: 100%
             }
         }
+
 
         .preloader-pct {
             font-size: 0.8rem;
@@ -689,24 +698,25 @@
             width: 100%;
             aspect-ratio: 4/5;
             border-radius: 24px;
-            background: linear-gradient(135deg, var(--glow-blue), var(--glow-violet));
-            border: 1px solid var(--border2);
+            /* background: linear-gradient(135deg, var(--glow-blue), var(--glow-violet)); */
+            /* border: 1px solid var(--border2); */
             overflow: hidden;
             position: relative;
             display: flex;
             align-items: center;
+ 
             justify-content: center
         }
 
         .about-avatar {
             font-size: 8rem;
-            opacity: 0.15
+            opacity: 0.54
         }
 
         .about-image-glow {
             position: absolute;
             inset: -40px;
-            background: radial-gradient(ellipse at center, rgba(96, 165, 250, 0.15), transparent 70%);
+            /* background: radial-gradient(ellipse at center, rgba(96, 165, 250, 0.15), transparent 70%); */
             animation: pulse 4s ease infinite
         }
 
@@ -726,7 +736,7 @@
             position: absolute;
             width: 80px;
             height: 80px;
-            border-color: var(--blue);
+            /* border-color: var(--blue); */
             border-style: solid;
             opacity: 0.4
         }
@@ -1580,7 +1590,7 @@
             }
 
             .about-grid {
-            grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr);
 
                 /* grid-template-columns: 2fr */
             }
@@ -1647,8 +1657,8 @@
                 grid-template-columns: 1fr
             }
         }
-        /* grid-template-columns: 1fr 1fr; Desktop: 2 columns */
 
+        /* grid-template-columns: 1fr 1fr; Desktop: 2 columns */
     </style>
 </head>
 
@@ -1732,7 +1742,10 @@
             <div class="about-image-wrap reveal">
                 <div class="about-image-frame">
                     <div class="about-image-glow"></div>
-                    <div class="about-avatar">👨‍💻</div>
+                    <!-- <div class="about-avatar">👨‍💻</div> -->
+                    <div class="about-avatar">
+                        <img src="assets/avatar.jpg" alt="Noman Nasir">
+                    </div>
                     <!-- <div class="about-corner tl"></div>
                     <div class="about-corner br"></div> -->
                 </div>
