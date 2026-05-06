@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Noman Nasir – Full Stack Software Engineer. Building scalable & secure web applications with MERN Stack, .NET, and modern web technologies.">
+        content="Noman Nasir – Full Stack Software Engineer. Building scalable & secure web applications with MERN Stack, NextJS, and modern web technologies.">
     <meta name="keywords"
-        content="Full Stack Developer, MERN Stack, .NET, React, Node.js, Software Engineer, Freelance Developer">
+        content="Full Stack Developer, MERN Stack, NextJS, React, Node.js, Software Engineer, Freelance Developer">
     <meta name="author" content="Noman Nasir">
     <title>Noman Nasir | Full Stack Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -274,8 +274,7 @@
             align-items: center
         }
 
-        .theme-btn,
-        .music-btn {
+        .theme-btn {
             width: 38px;
             height: 38px;
             border-radius: 50%;
@@ -290,18 +289,17 @@
             font-size: 0.85rem
         }
 
-        .theme-btn:hover,
-        .music-btn:hover {
+        .theme-btn:hover {
             border-color: var(--blue);
             color: var(--blue);
             background: var(--glow-blue)
         }
 
-        .music-btn.playing {
+        /* .music-btn.playing {
             color: var(--violet);
             border-color: var(--violet);
             animation: pulse-btn 2s infinite
-        }
+        } */
 
         @keyframes pulse-btn {
 
@@ -1697,7 +1695,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-actions">
-            <button class="music-btn" id="musicBtn" title="Toggle music"><i class="fas fa-music"></i></button>
+            
             <button class="theme-btn" id="themeBtn" title="Toggle theme"><i class="fas fa-moon"></i></button>
             <div class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
@@ -1759,17 +1757,17 @@
                     Karachi, Pakistan. I specialize in building high-performance, scalable, and secure web applications
                     that solve real-world problems.</p>
                 <p>From crafting pixel-perfect frontends with React to engineering robust backends with Node.js and
-                    .NET, I take ownership of the entire product lifecycle — from conception to deployment.</p>
+                    NestJS, I take ownership of the entire product lifecycle — from conception to deployment.</p>
                 <p>I thrive in remote, international environments and love working with clients who have big visions and
                     bold goals.</p>
                 <div class="about-highlights">
                     <span class="highlight-tag">MERN Stack</span>
-                    <span class="highlight-tag">.NET / C#</span>
+                    <span class="highlight-tag">NextJS</span>
                     <span class="highlight-tag">Role-Based Systems</span>
                     <span class="highlight-tag">REST APIs</span>
                     <span class="highlight-tag">JWT Auth</span>
                     <span class="highlight-tag">MongoDB</span>
-                    <span class="highlight-tag">SQL Server</span>
+                    <span class="highlight-tag">Postgre SQL</span>
                     <span class="highlight-tag">Docker</span>
                 </div>
                 <div class="counters">
@@ -1853,7 +1851,7 @@
                     </div>
                 </div>
                 <div class="skill-bar-wrap">
-                    <div class="skill-bar-header"><span class="skill-bar-name">.NET / C#</span><span
+                    <div class="skill-bar-header"><span class="skill-bar-name">NextJS</span><span
                             class="skill-bar-pct">80%</span></div>
                     <div class="skill-bar-bg">
                         <div class="skill-bar-fill" data-width="80"></div>
@@ -1869,7 +1867,7 @@
                 <div class="skill-icons-row">
                     <span class="skill-icon-chip"><i class="fab fa-node-js"></i> Node</span>
                     <span class="skill-icon-chip">⚡ Express</span>
-                    <span class="skill-icon-chip">🔷 .NET</span>
+                    <span class="skill-icon-chip">🔷 NestJS</span>
                     <span class="skill-icon-chip">🔌 APIs</span>
                 </div>
             </div>
@@ -1884,7 +1882,7 @@
                     </div>
                 </div>
                 <div class="skill-bar-wrap">
-                    <div class="skill-bar-header"><span class="skill-bar-name">SQL Server</span><span
+                    <div class="skill-bar-header"><span class="skill-bar-name">Postgre SQL</span><span
                             class="skill-bar-pct">82%</span></div>
                     <div class="skill-bar-bg">
                         <div class="skill-bar-fill" data-width="82"></div>
@@ -1976,12 +1974,12 @@
                 </div>
                 <div class="project-body">
                     <h3 class="project-title">Enterprise ERP Dashboard</h3>
-                    <p class="project-desc">A comprehensive ERP system built with .NET backend and React frontend
+                    <p class="project-desc">A comprehensive ERP system built with NestJS backend and React frontend
                         featuring inventory, HR, finance modules with RBAC security layers.</p>
                     <div class="project-tech">
-                        <span class="tech-badge">.NET</span>
+                        <span class="tech-badge">NestJS</span>
                         <span class="tech-badge">React</span>
-                        <span class="tech-badge">SQL Server</span>
+                        <span class="tech-badge">Postgre SQL</span>
                         <span class="tech-badge">RBAC</span>
                     </div>
                     <div class="project-links">
@@ -2073,7 +2071,7 @@
                 <div class="exp-icon"><i class="fas fa-code"></i></div>
                 <h3 class="exp-title">Full Stack Web Development</h3>
                 <p class="exp-desc">Complete web application development from design to deployment. I build fast,
-                    responsive, SEO-friendly applications using the MERN stack and .NET with clean, maintainable code.
+                    responsive, SEO-friendly applications using the MERN stack and NestJS with clean, maintainable code.
                 </p>
             </div>
             <div class="exp-card reveal reveal-delay-1">
@@ -2124,65 +2122,65 @@
                         <p class="testi-text">"Noman delivered an exceptional e-commerce platform that exceeded all
                             expectations. His attention to detail and communication throughout the project was
                             outstanding. Will definitely hire again."</p>
-                        <div class="testi-author">
+                        <!-- <div class="testi-author">
                             <div class="testi-avatar">SA</div>
                             <div>
                                 <div class="testi-name">Sarah Anderson</div>
                                 <div class="testi-role">CEO, RetailFlow Inc. — USA</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="testimonial-card">
                         <div class="testi-stars">★★★★★</div>
                         <p class="testi-text">"The RBAC system Noman built for our SaaS product is rock solid. He truly
                             understood our complex permission requirements and delivered clean, scalable code on time."
                         </p>
-                        <div class="testi-author">
+                        <!-- <div class="testi-author">
                             <div class="testi-avatar">MK</div>
                             <div>
                                 <div class="testi-name">Marcus Klein</div>
                                 <div class="testi-role">CTO, DevStack GmbH — Germany</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="testimonial-card">
                         <div class="testi-stars">★★★★★</div>
                         <p class="testi-text">"Absolutely brilliant work on our healthcare management system. Noman's
                             full-stack expertise saved us months of development time. The code quality is excellent and
                             well-documented."</p>
-                        <div class="testi-author">
+                        <!-- <div class="testi-author">
                             <div class="testi-avatar">RP</div>
                             <div>
                                 <div class="testi-name">Rahul Patel</div>
                                 <div class="testi-role">Product Lead, MedSync — UK</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="testimonial-card">
                         <div class="testi-stars">★★★★★</div>
                         <p class="testi-text">"Working with Noman was a pleasure from start to finish. He transformed
-                            our legacy system into a modern .NET application with a beautiful React frontend. Highly
+                            our legacy system into a modern NestJS application with a beautiful React frontend. Highly
                             recommended!"</p>
-                        <div class="testi-author">
+                        <!-- <div class="testi-author">
                             <div class="testi-avatar">LA</div>
                             <div>
                                 <div class="testi-name">Laila Al-Hassan</div>
                                 <div class="testi-role">Director, TechVentures — UAE</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="testimonial-card">
                         <div class="testi-stars">★★★★★</div>
                         <p class="testi-text">"Noman is one of the most professional freelancers I've worked with. He
                             delivered a complex analytics dashboard in record time with zero bugs. A true craftsman."
                         </p>
-                        <div class="testi-author">
+                        <!-- <div class="testi-author">
                             <div class="testi-avatar">JW</div>
                             <div>
                                 <div class="testi-name">James Wu</div>
                                 <div class="testi-role">Founder, DataPulse — Canada</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -2226,11 +2224,11 @@
             <div class="contact-form reveal reveal-delay-1">
                 <div class="form-group">
                     <label>Your Name</label>
-                    <input type="text" placeholder="John Doe" id="f-name">
+                    <input type="text" placeholder="Noman Nasir" id="f-name">
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" placeholder="john@example.com" id="f-email">
+                    <input type="email" placeholder="mnomanmnasir@gmail.com" id="f-email">
                 </div>
                 <div class="form-group">
                     <label>Your Message</label>
@@ -2346,12 +2344,12 @@
 
         // MUSIC TOGGLE (ambient visual only)
         let playing = false;
-        const musicBtn = document.getElementById('musicBtn');
-        musicBtn.onclick = () => {
-            playing = !playing;
-            musicBtn.classList.toggle('playing', playing);
-            musicBtn.innerHTML = playing ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-music"></i>';
-        };
+        // const musicBtn = document.getElementById('musicBtn');
+        // musicBtn.onclick = () => {
+        //     playing = !playing;
+        //     musicBtn.classList.toggle('playing', playing);
+        //     musicBtn.innerHTML = playing ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-music"></i>';
+        // };
 
         // TYPED TEXT
         const phrases = ["powerful web apps.", "scalable APIs.", "secure systems.", "beautiful UIs.", "full-stack solutions."];
