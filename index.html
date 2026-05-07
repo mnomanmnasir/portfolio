@@ -8,8 +8,7 @@
         content="Noman Nasir – Full Stack Software Engineer. Building scalable & secure web applications with MERN Stack, NextJS, and modern web technologies.">
     <meta name="keywords"
         content="Full Stack Developer, MERN Stack, NextJS, React, Node.js, Software Engineer, Freelance Developer">
-    
-        <meta name="author" content="Noman Nasir">
+    <meta name="author" content="Noman Nasir">
     <title>Noman Nasir | Full Stack Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -33,6 +32,10 @@
             --dim: #475569;
             --glow-blue: rgba(96, 165, 250, 0.15);
             --glow-violet: rgba(167, 139, 250, 0.12);
+            --bg: #0b0f1a;
+            --text: #ffffff;
+            --sidebar-bg: rgba(15, 23, 42, 0.95);
+            --link-color: #ffffff;
             /* --font-head: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif; */
             --radius: 16px;
@@ -51,6 +54,10 @@
             --dim: #94a3b8;
             --glow-blue: rgba(96, 165, 250, 0.2);
             --glow-violet: rgba(167, 139, 250, 0.15);
+            --bg: #ffffff;
+            --text: #0b0f1a;
+            --sidebar-bg: #ffffff;
+            --link-color: #0b0f1a;
         }
 
         *,
@@ -92,6 +99,37 @@
             transform: translate(-50%, -50%);
             transition: width 0.2s, height 0.2s, background 0.2s;
             mix-blend-mode: screen
+        }
+
+        /* .mobile-menu {
+            right: -100%;
+            transition: 0.4s ease;
+            background: var(--sidebar-bg);
+            color: var(--text);
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            transition: 0.4s ease;
+            padding: 60px 20px;
+            z-index: 999;
+        } */
+
+        .mobile-menu.open {
+            right: 0;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
         }
 
         .about-avatar img {
@@ -334,7 +372,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(5, 8, 16, 0.97);
+            background: var(--sidebar-bg);
             backdrop-filter: blur(20px);
             z-index: 999;
             flex-direction: column;
@@ -351,7 +389,8 @@
             font-family: var(--font-head);
             font-size: 2rem;
             font-weight: 700;
-            color: var(--text);
+            color: var(--link-color);
+            /* color: var(--text); */
             text-decoration: none;
             transition: color 0.3s
         }
@@ -703,7 +742,7 @@
             position: relative;
             display: flex;
             align-items: center;
- 
+
             justify-content: center
         }
 
@@ -1696,7 +1735,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-actions">
-            
+
             <button class="theme-btn" id="themeBtn" title="Toggle theme"><i class="fas fa-moon"></i></button>
             <div class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
@@ -1708,10 +1747,10 @@
     <section id="hero">
         <canvas id="canvas-bg"></canvas>
         <div class="hero-content">
-            <div class="hero-badge reveal">
-                <!-- <span class="hero-badge-dot"></span>
+            <!-- <div class="hero-badge reveal"> -->
+            <!-- <span class="hero-badge-dot"></span>
       Available for Freelance Work -->
-            </div>
+            <!-- </div> -->
             <h1 class="hero-name reveal reveal-delay-1">
                 <span class="line1">Noman</span>
                 <span class="line2">Nasir</span>
@@ -2330,9 +2369,28 @@
         });
 
         // MOBILE MENU
-        document.getElementById('hamburger').onclick = () => document.getElementById('mobileMenu').classList.add('open');
-        document.getElementById('closeMenu').onclick = closeMobileMenu;
-        function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+        // document.getElementById('hamburger').onclick = () => document.getElementById('mobileMenu').classList.add('open');
+        // document.getElementById('closeMenu').onclick = closeMobileMenu;
+
+        // function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenu');
+
+        // TOGGLE OPEN/CLOSE ON HAMBURGER CLICK
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+        // CLOSE BUTTON
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+
+        // FUNCTION
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('active');
+        }
 
         // THEME TOGGLE
         let dark = true;
@@ -2500,6 +2558,8 @@
             }, 2200);
         });
     </script>
+
+
 </body>
 
 </html>
