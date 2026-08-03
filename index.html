@@ -721,20 +721,22 @@
         /* ABOUT */
         #about .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            /* grid-template-columns: 1fr 1fr; */
-            gap: 100px;
+            grid-template-columns: minmax(300px, 420px) 1fr;
+            gap: 32px;
             align-items: center;
-            margin-top: 64px
+            margin-top: 64px;
         }
 
         .about-image-wrap {
-            position: relative
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            margin: 0;
         }
 
         .about-image-frame {
             width: 100%;
-            aspect-ratio: 4/5;
+            /* aspect-ratio: 4/5; */
             border-radius: 24px;
             /* background: linear-gradient(135deg, var(--glow-blue), var(--glow-violet)); */
             /* border: 1px solid var(--border2); */
@@ -800,8 +802,10 @@
             background: var(--bg2);
             border: 1px solid var(--border2);
             border-radius: 12px;
-            padding: 16px 20px;
-            backdrop-filter: blur(20px)
+            padding: 14px 20px;
+            backdrop-filter: blur(20px);
+            z-index: 3;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .about-badge-float .num {
@@ -1620,17 +1624,15 @@
         /* RESPONSIVE */
         @media(max-width:1024px) {
 
-            /* .about-grid, */
             .experience-grid,
             .contact-wrap,
             .footer-grid {
                 grid-template-columns: 1fr
             }
 
-            .about-grid {
-                grid-template-columns: repeat(3, 1fr);
-
-                /* grid-template-columns: 2fr */
+            #about .about-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
             }
 
             .skills-grid {
@@ -1642,12 +1644,13 @@
             }
 
             .about-image-wrap {
-                max-width: 400px;
+                max-width: 380px;
                 margin: 0 auto
             }
 
             .about-badge-float {
-                right: 0
+                right: 0;
+                bottom: 15px;
             }
         }
 
@@ -1658,6 +1661,20 @@
 
             .hamburger {
                 display: flex
+            }
+
+            #about .about-grid {
+                gap: 40px;
+                margin-top: 40px;
+            }
+
+            .about-text {
+                text-align: left;
+            }
+
+            .about-highlights {
+                justify-content: flex-start;
+                gap: 8px;
             }
 
             .skills-grid {
@@ -1673,7 +1690,21 @@
             }
 
             .counters {
-                grid-template-columns: 1fr 1fr 1fr
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+
+            .counter-item {
+                padding: 16px 8px;
+            }
+
+            .counter-num {
+                font-size: 1.8rem;
+            }
+
+            .counter-label {
+                font-size: 0.7rem;
+                letter-spacing: 0.05em;
             }
 
             .hero-ctas {
@@ -1683,8 +1714,39 @@
         }
 
         @media(max-width:480px) {
+            .about-image-wrap {
+                max-width: 100%;
+            }
+
+            .about-badge-float {
+                right: 8px;
+                bottom: 10px;
+                padding: 10px 14px;
+            }
+
+            .about-badge-float .num {
+                font-size: 1.4rem;
+            }
+
+            .about-badge-float .lbl {
+                font-size: 0.65rem;
+            }
+
             .counters {
-                grid-template-columns: 1fr
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+
+            .counter-item {
+                padding: 12px 4px;
+            }
+
+            .counter-num {
+                font-size: 1.4rem;
+            }
+
+            .counter-label {
+                font-size: 0.62rem;
             }
 
             .experience-grid {
@@ -1696,7 +1758,12 @@
             }
         }
 
-        /* grid-template-columns: 1fr 1fr; Desktop: 2 columns */
+        @media(max-width:360px) {
+            .counters {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
     </style>
 </head>
 
@@ -1779,7 +1846,7 @@
         <div class="about-grid">
             <div class="about-image-wrap reveal">
                 <div class="about-image-frame">
-                    <div class="about-image-glow"></div>
+                    <!-- <div class="about-image-glow"></div> -->
                     <!-- <div class="about-avatar">👨‍💻</div> -->
                     <div class="about-avatar">
                         <img src="assets/avatar.jpg" alt="Noman Nasir">
@@ -1794,20 +1861,26 @@
             </div>
             <div class="about-text reveal reveal-delay-1">
                 <p>Hey there! I'm <strong>Noman Nasir</strong>, a passionate Full Stack Software Engineer based in
-                    Karachi, Pakistan. I specialize in building high-performance, scalable, and secure web applications
-                    that solve real-world problems.</p>
-                <p>From crafting pixel-perfect frontends with React to engineering robust backends with Node.js and
-                    NestJS, I take ownership of the entire product lifecycle — from conception to deployment.</p>
-                <p>I thrive in remote, international environments and love working with clients who have big visions and
-                    bold goals.</p>
+                    Karachi, Pakistan. I specialize in designing and engineering high-performance, scalable, and secure
+                    web applications
+                    that turn complex ideas into seamless digital solutions.</p>
+                <p>With deep technical expertise across the modern stack — from crafting pixel-perfect, responsive
+                    frontends with React and Next.js to building robust backends with Node.js and NestJS — I take
+                    complete ownership of the entire product lifecycle from initial conception to cloud deployment.</p>
+                <p>Whether architecting role-based access systems, optimizing database queries, or containerizing
+                    applications with Docker, I am dedicated to writing clean, maintainable code and following software
+                    engineering best practices.</p>
+                <p>I thrive in fast-paced, remote, and international environments, collaborating with clients and
+                    engineering teams who aim to build impactful software products.</p>
                 <div class="about-highlights">
                     <span class="highlight-tag">MERN Stack</span>
                     <span class="highlight-tag">NextJS</span>
+                    <span class="highlight-tag">TypeScript</span>
                     <span class="highlight-tag">Role-Based Systems</span>
                     <span class="highlight-tag">REST APIs</span>
                     <span class="highlight-tag">JWT Auth</span>
                     <span class="highlight-tag">MongoDB</span>
-                    <span class="highlight-tag">Postgre SQL</span>
+                    <span class="highlight-tag">PostgreSQL</span>
                     <span class="highlight-tag">Docker</span>
                 </div>
                 <div class="counters">
